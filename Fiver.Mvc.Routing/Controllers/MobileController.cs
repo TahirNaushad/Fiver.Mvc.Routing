@@ -10,7 +10,8 @@ namespace Fiver.Mvc.Routing.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Mobile/Index");
+            var url = Url.Action("Index"); // /mobile
+            return Content($"Mobile/Index (Url: {url})");
         }
 
         public IActionResult PageOne()
