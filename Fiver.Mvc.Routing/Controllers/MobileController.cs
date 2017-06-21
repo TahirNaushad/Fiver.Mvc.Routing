@@ -15,7 +15,7 @@ namespace Fiver.Mvc.Routing.Controllers
 
         public IActionResult PageOne()
         {
-            var url = Url.Action("PageOne");
+            var url = Url.Action("PageOne"); // /mobile/PageOne
             return Content($"Mobile/One (Url: {url})");
         }
 
