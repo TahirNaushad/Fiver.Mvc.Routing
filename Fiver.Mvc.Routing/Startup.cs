@@ -4,19 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Fiver.Mvc.Routing
 {
     public class Startup
     {
-        public Startup(
-            IHostingEnvironment env,
-            ILoggerFactory loggerFactory)
-        {
-
-        }
-
         public void ConfigureServices(
             IServiceCollection services)
         {
@@ -33,8 +25,7 @@ namespace Fiver.Mvc.Routing
 
         public void Configure(
             IApplicationBuilder app,
-            IHostingEnvironment env,
-            ILoggerFactory loggerFactory)
+            IHostingEnvironment env)
         {
             app.UseDeveloperExceptionPage();
             app.UseMvc(routes =>
